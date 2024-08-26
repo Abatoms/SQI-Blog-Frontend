@@ -1,0 +1,60 @@
+/* CreateBlog.module.css */
+.formContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #108d87;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formLabel {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.formTextarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.btn {
+  padding: 12px 15px;
+  outline: none;
+  border: none;
+  color: #108d87;
+  background-color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
