@@ -21,10 +21,10 @@ const Homepage = ({ blogs, handleDeleteBlog, selectedId, setSelectedId }) => {
     <div className={styles.homepage_container}>
       <h1 className={styles.homepage_title}>All Blogs</h1>
       {blogs.map((blog) => (
-        <div key={blog.id} className={styles.blog_container}>
+        <div key={blog._id} className={styles.blog_container}>
           <div>
             <h1 className={styles.blog_title}>{blog.title}</h1>
-            <p className={styles.blog_content}>{blog.content}</p>
+            <p className={styles.blog_content}>{blog.description}</p>
           </div>
           <div className={styles.btns}>
             <button
