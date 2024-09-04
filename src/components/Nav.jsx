@@ -1,25 +1,36 @@
 import { Link } from "react-router-dom";
-import styles from "./../styles/Nav.module.css"; // Import the CSS module
 
 const Nav = () => {
   return (
-    <div className={styles.nav}>
-      <div className={styles.nav__header}>
-        <h1 className={styles.nav__logo}>
+    <div className="flex justify-between items-center bg-[#208d87] p-3">
+      <div className="basis-[20%]">
+        <h1 className="text-white font-bold text-3xl ml-3">
           <Link to={"/"}>Blogga</Link>
         </h1>
       </div>
-      <div className={styles.nav__links}>
-        <div className={styles.nav__link}>
+      <div className="basis-[50%] flex justify-center gap-10 items-center">
+        <div className="text-xl font-medium text-gray-300 hover:text-white">
           <p>
             <Link to={"/create-blog"}>Create Blog</Link>
           </p>
         </div>
-        <div className={styles.nav__link}>
+        <div className="text-xl font-medium text-gray-300 hover:text-white">
           <p>See All Blogs</p>
         </div>
-        <div className={styles.nav__link}>
-          <p>Our company</p>
+        <div className="text-xl font-medium text-gray-300 hover:text-white">
+          <p>See All Blogs</p>
+        </div>
+      </div>
+      <div className="basis-[20%] flex justify-center gap-8 items-center">
+        <div className="bg-white border-2 px-4 py-2 border-[#208d87] rounded-lg ">
+          <p className="text-[#208d87] font-bold text-xl">
+            <Link to={"/login"}>Login</Link>
+          </p>
+        </div>
+        <div className="bg-[#208d87] border-2 px-4 py-2 border-[#208d87] rounded-lg hover:bg-white">
+          <p className="text-white font-bold text-xl hover:text-[#208d87]">
+            <Link to={"/register"}>Register</Link>
+          </p>
         </div>
       </div>
     </div>

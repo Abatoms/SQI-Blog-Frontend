@@ -4,6 +4,8 @@ import "./App.css";
 import Homepage from "./pages/Homepage";
 import CreateBlog from "./pages/CreateBlog";
 import Nav from "./components/Nav";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
@@ -54,7 +56,7 @@ function App() {
       }
       const response = await fetch(`${apiUrl}/blogs`, {
         method: "POST",
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, user: "66d6c8ae55229a2b2baae8b2" }),
         headers: {
           "Content-type": "application/json",
         },
@@ -94,6 +96,8 @@ function App() {
               />
             }
           />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
     </section>
