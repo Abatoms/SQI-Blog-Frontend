@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import flowerImage from "./../assets/images/flower.jpg";
-const BlogCard = ({ title, description }) => {
+const BlogCard = ({ title, description, user }) => {
   return (
     <div className="h-[450px] bg-white rounded-md shadow-lg mb-4 hover:scale-105 transition-all ease-in">
       <div className="w-full h-[250px]">
@@ -15,9 +15,7 @@ const BlogCard = ({ title, description }) => {
             ? `${description.slice(0, 35)}...`
             : description}
         </p>
-        <p className="text-lg p-2 text-neutral-500 font-medium">
-          By: Bolarinwa Ahmed
-        </p>
+        <p className="text-lg p-2 text-neutral-500 font-medium">By: {user}</p>
       </div>
       <div className=""></div>
     </div>

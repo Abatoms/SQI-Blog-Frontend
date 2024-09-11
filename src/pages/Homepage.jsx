@@ -13,7 +13,11 @@ const Homepage = ({ blogs, selectedId }) => {
       <div className="flex  justify-between items-center gap-2 flex-wrap">
         {blogs.map((blog) => (
           <div key={blog._id} className="basis-[20%]">
-            <BlogCard title={blog.title} description={blog.description} />
+            <BlogCard
+              title={blog.title}
+              description={blog.description}
+              user={blog?.user?.firstname + " " + blog?.user?.lastname}
+            />
           </div>
         ))}
       </div>

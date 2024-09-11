@@ -54,11 +54,13 @@ function App() {
         alert("Please fill in all fields");
         return;
       }
+      const token = localStorage.getItem("token");
       const response = await fetch(`${apiUrl}/blogs`, {
         method: "POST",
-        body: JSON.stringify({ ...formData, user: "66d6c8ae55229a2b2baae8b2" }),
+        body: JSON.stringify({ ...formData }),
         headers: {
           "Content-type": "application/json",
+          authorization: `Bearer ${token}`,
         },
       });
       const data = await response.json();
