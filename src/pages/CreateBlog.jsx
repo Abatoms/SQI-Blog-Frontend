@@ -1,11 +1,30 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import styles from "./../styles/Createblog.module.css";
 import { useNavigate } from "react-router-dom";
+import { useBlogContext } from "../contexts/BlogContext";
 
-const CreateBlog = ({ formData, handleFormChange, handleSubmit }) => {
+const CreateBlog = () => {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    title: "",
+    content: "",
+    description: "",
+  });
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((curr) => {
+      return {
+        ...curr,
+        [name]: value,
+      };
+    });
+  };
+
+  const { handleAddBlog } = useBlogContext();
   const submitForm = async () => {
-    await handleSubmit();
+    await handleAddBlog(formData);
     navigate("/");
   };
   return (

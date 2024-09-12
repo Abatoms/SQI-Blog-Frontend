@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useBlogContext } from "../contexts/BlogContext";
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -15,6 +16,12 @@ const Nav = () => {
     localStorage.removeItem("user");
     navigate("/login");
   };
+
+  //
+  const { myName } = useBlogContext();
+
+  console.log("In Nav: ", myName);
+
   return (
     <div className="flex justify-between items-center bg-[#208d87] p-3">
       <div className="basis-[20%]">

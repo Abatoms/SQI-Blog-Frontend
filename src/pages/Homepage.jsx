@@ -2,9 +2,12 @@
 
 import styles from "./../styles/Homepage.module.css";
 import BlogCard from "../components/BlogCard";
+import { useBlogContext } from "../contexts/BlogContext";
 
-const Homepage = ({ blogs, selectedId }) => {
+const Homepage = ({ selectedId }) => {
   // console.log("In Homepage", blogs);
+
+  const { blogs } = useBlogContext();
 
   console.log("Selected Blog id is", selectedId);
   return (
